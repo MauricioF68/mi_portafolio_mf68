@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
-            Mauricio F.
+            Mauricio Terrones Alayo
           </Link>
           <span className="hidden sm:block text-slate-400 text-sm">/ Gestión & Desarrollo</span>
         </div>

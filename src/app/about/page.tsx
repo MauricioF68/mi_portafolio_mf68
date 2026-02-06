@@ -11,7 +11,7 @@ export default function AboutPage() {
     es: {
       title: "Más que código:",
       subtitle: "Estrategia y Estructura.",
-      description: "Soy Mauricio, estudiante de Ingeniería de Sistemas e IA. Mi objetivo no es solo escribir software, sino entender por qué lo construimos. Me especializo en cerrar la brecha entre la visión del negocio y la ejecución técnica.",
+      description: "Soy Mauricio, estudiante de Ingeniería de Sistemas e IA. Mi objetivo no es solo escribir software, sino entender por qué lo construimos. Mi enfoque esta en cerrar la brecha entre la visión del negocio y la ejecución técnica.",
       cards: {
         mgmt: { title: "Gestión de Proyectos", desc: "Enfoque en metodologías ágiles y planificación estructurada." },
         req: { title: "Ingeniería de Requisitos", desc: "Traducción de necesidades de usuario a especificaciones técnicas." },
@@ -22,7 +22,7 @@ export default function AboutPage() {
     en: {
       title: "More than code:",
       subtitle: "Strategy and Structure.",
-      description: "I'm Mauricio, a Systems Engineering & AI student. My goal is not just to write software, but to understand why we build it. I specialize in bridging the gap between business vision and technical execution.",
+      description: "I'm Mauricio, a Systems Engineering & AI student. My goal is not just to write software, but to understand why we build it. My focus is on bridging the gap between business vision and technical execution.",
       cards: {
         mgmt: { title: "Project Management", desc: "Focus on agile methodologies and structured planning." },
         req: { title: "Requirements Engineering", desc: "Translating user needs into technical specifications." },
@@ -69,8 +69,8 @@ export default function AboutPage() {
               {content[language].cards.mgmt.desc}
             </p>
             <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li>• Scrum & Kanban</li>
-              <li>• Jira / Trello / Notion</li>
+              <li>• Scrum</li>
+              <li>• Notion / Trello / Jira  </li>
               <li>• Planificación de Sprints</li>
             </ul>
           </div>
@@ -85,9 +85,9 @@ export default function AboutPage() {
                {content[language].cards.req.desc}
             </p>
             <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li>• User Stories</li>
-              <li>• BPMN Diagrams</li>
-              <li>• Stakeholder Interviews</li>
+              <li>• Historias de Usuario</li>
+              <li>• Diagramas BPMN</li>
+              <li>• Reuniones con Stakeholder</li>
             </ul>
           </div>
 
@@ -101,10 +101,13 @@ export default function AboutPage() {
                {content[language].cards.dev.desc}
             </p>
             <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Php</span>
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Laravel</span>
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">JavaScript</span>
               <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">React</span>
-              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Next.js</span>
-              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Node.js</span>
-              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">SQL</span>
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Tailwind CSS</span>
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">MySql</span>
+              <span className="px-2 py-1 bg-white dark:bg-slate-800 rounded text-xs border border-slate-200 dark:border-slate-700">Figma</span>
             </div>
           </div>
 
@@ -117,10 +120,9 @@ export default function AboutPage() {
             <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
                {content[language].cards.ai.desc}
             </p>
-            <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li>• Python for Data Science</li>
-              <li>• ML Models</li>
-              <li>• Automation</li>
+            <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">              
+              <li>• Entrenamiento de modelos de IA</li>
+              <li>• Automatizacion</li>
             </ul>
           </div>
 
