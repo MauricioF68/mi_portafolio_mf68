@@ -83,7 +83,7 @@ export default function ContactPage() {
               <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">{content[language].socialsTitle}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                  {/* Email Directo */}
-                 <a href="mailto:tuemail@gmail.com" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-blue-500/50 transition-colors group">
+                 <a href="mailto:mauricioterrones98@gmail.com" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-blue-500/50 transition-colors group">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg group-hover:scale-110 transition-transform">
                     <Mail size={20} />
                   </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 </a>
 
                 {/* WhatsApp */}
-                <a href="https://wa.me/51999999999" target="_blank" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-green-500/50 transition-colors group">
+                <a href="https://wa.me/51933747950" target="_blank" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-green-500/50 transition-colors group">
                   <div className="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg group-hover:scale-110 transition-transform">
                     <WhatsAppIcon />
                   </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 </a>
 
                 {/* LinkedIn */}
-                <a href="https://linkedin.com/in/tu-usuario" target="_blank" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-blue-700/50 transition-colors group">
+                <a href="https://pe.linkedin.com/in/mauricio-terrones-alayo-155538271" target="_blank" className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#151921] border border-slate-100 dark:border-slate-800 hover:border-blue-700/50 transition-colors group">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg group-hover:scale-110 transition-transform">
                     <Linkedin size={20} />
                   </div>
