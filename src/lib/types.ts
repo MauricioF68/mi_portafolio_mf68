@@ -18,7 +18,7 @@ export interface Project {
     en: string;
   };
   techStack: string[];
-  category: 'Desarrollo' | 'Gestión' | 'Híbrido';
+  category: 'Desarrollo' | 'Gestión' | 'Híbrido'|'Web App / CMS'| 'PWA / Real-time'|'AgriTech';
   imageUrl: string;
   githubUrl?: string;
   demoUrl?: string;
@@ -41,8 +41,7 @@ export interface Project {
     database?: {
       diagramUrl: string; // La foto del MER
       engine: string;     // Ej: PostgreSQL
-      tablesCount: number;
-      normalization: string; // Ej: "3FN (Tercera Forma Normal)"
+      tablesCount: number;      
     };
     management?: {
       backlogUrl?: string; // Link a tu Notion/Jira público

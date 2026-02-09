@@ -14,7 +14,7 @@ export default function Home() {
       badge: "Estudiante de Ingeniería de Sistemas e IA",
       title1: "Construyendo software con",
       title2: "visión estratégica.",
-      description: "Hola, soy Mauricio. Me especializo en conectar el mundo de la ingeniería de requisitos con el desarrollo de software escalable.",
+      description: "Hola, soy Mauricio. Me dedico a integrar el análisis de requerimientos con el desarrollo de software para construir soluciones funcionales y escalables.",
       btnProjects: "Ver Portafolio",
       btnAbout: "Más sobre mí"
     },
@@ -22,7 +22,7 @@ export default function Home() {
       badge: "Systems Engineering & AI Student",
       title1: "Building software with",
       title2: "strategic vision.",
-      description: "Hi, I'm Mauricio. I specialize in bridging the gap between requirements engineering and scalable software development.",
+      description: "Hi, I'm Mauricio. I focus on integrating requirements analysis with software development to build functional and scalable solutions.",
       btnProjects: "View Portfolio",
       btnAbout: "More about me"
     }

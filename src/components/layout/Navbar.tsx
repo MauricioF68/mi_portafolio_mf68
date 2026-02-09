@@ -3,11 +3,11 @@ import { useTheme } from "next-themes";
 import { Sun, Moon, Languages, Download, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext"; // <--- Importar Hook
+import { useLanguage } from "@/context/LanguageContext"; 
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
-  const { language, setLanguage, t } = useLanguage(); // <--- Usar el Hook
+  const { language, setLanguage, t } = useLanguage(); 
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);

@@ -18,8 +18,8 @@ export default function ContactPage() {
 
   const content = {
     es: {
-      title: "Hablemos de tu próximo proyecto.",
-      description: "Estoy disponible para roles de Gestión de Proyectos, Análisis de Requisitos o desarrollo.",
+      title: "¿Tienes un desafío tecnológico en mente?",
+      description: "Estoy listo para aportar mis conocimientos en desarrollo, bases de datos o análisis a tu equipo. Envíame un mensaje y hablemos sobre cómo podemos trabajar juntos.",
       socialsTitle: "Mis Redes",
       labels: { name: "Nombre", email: "Correo Electrónico", message: "Mensaje", btnSend: "Enviar Mensaje", sending: "Enviando..." },
       success: { title: "¡Mensaje Enviado!", desc: "Gracias por contactarme. Revisaré tu mensaje pronto.", btnBack: "Volver al formulario" }
