@@ -14,7 +14,7 @@ const WhatsAppIcon = () => (
 
 export default function ContactPage() {
   const [state, handleSubmit] = useForm("xdalnqyd"); // <--- TU CÓDIGO DE FORMSPREE
-  const { language } = useLanguage(); // <--- IDIOMA
+  const { language, t } = useLanguage(); // <--- AGREGADO: "t" para usar las traducciones globales
 
   const content = {
     es: {
@@ -133,6 +133,7 @@ export default function ContactPage() {
                   type="text"
                   name="name"
                   required
+                  placeholder={t("contact.placeholderName")} /* <--- CAMBIO AQUÍ */
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                 />
               </div>
@@ -144,6 +145,7 @@ export default function ContactPage() {
                   type="email"
                   name="email"
                   required
+                  placeholder={t("contact.placeholderEmail")} /* <--- CAMBIO AQUÍ */
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                 />
                 <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-xs" />
@@ -156,6 +158,7 @@ export default function ContactPage() {
                   name="message"
                   required
                   rows={4}
+                  placeholder={t("contact.placeholderMessage")} /* <--- CAMBIO AQUÍ */
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
                 />
                 <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-xs" />

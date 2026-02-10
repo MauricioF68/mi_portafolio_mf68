@@ -3,20 +3,17 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { useTheme } from "next-themes"; // <--- CAMBIO IMPORTANTE: Usamos la librería oficial
-import { Moon, Sun, Languages, Menu, X, Github, Linkedin } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Moon, Sun, Languages, Menu, X, Github, Linkedin, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme(); // <--- Hook oficial
+  const { theme, setTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   
-  // Estado para controlar si el componente ya se montó en el cliente
-  // (Esto evita errores de hidratación con el tema)
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Esperamos a que el componente se monte para mostrar el botón de tema
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -29,7 +26,6 @@ export default function Navbar() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Si no está montado, renderizamos un navbar "placeholder" o null para evitar saltos
   if (!mounted) {
     return (
         <nav className="fixed w-full z-50 bg-white/80 dark:bg-[#0b0e14]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 h-16"></nav>
@@ -41,12 +37,17 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         
         {/* LOGO */}
-        <Link href="/" className="font-bold text-xl tracking-tighter hover:text-blue-600 transition-colors">
-          Mauricio<span className="text-blue-600">.dev</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
+            Mauricio Terrones Alayo
+          </Link>
+          <span className="hidden sm:block text-slate-400 text-sm">
+            {t("nav.subtitle")}
+          </span>
+        </div>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
             {t("nav.about")}
           </Link>
@@ -57,10 +58,36 @@ export default function Navbar() {
             {t("nav.contact")}
           </Link>
 
+          {/* BOTÓN CV (DESKTOP) - COMPACTO Y CON LATIDO */}
+          <motion.a 
+            href="/cv.pdf" 
+            download="CV_Mauricio_Terrones.pdf"
+            // Animación de latido infinito
+            animate={{ 
+              scale: [1, 1.05, 1], // Crece y se encoge
+              boxShadow: [
+                "0px 0px 0px rgba(37, 99, 235, 0)", 
+                "0px 0px 15px rgba(37, 99, 235, 0.3)", // Resplandor sutil
+                "0px 0px 0px rgba(37, 99, 235, 0)"
+              ]
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            whileHover={{ scale: 1.1 }} // Al pasar el mouse crece un poco más
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 px-4 py-1.5 bg-blue-600 dark:bg-blue-500 text-white rounded-full text-xs font-bold shadow-lg shadow-blue-500/20"
+          >
+            <Download size={14} className="stroke-[3px]" /> {/* Ícono un poco más grueso */}
+            {t("nav.cv")}
+          </motion.a>
+
           <div className="h-4 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
 
           {/* Botones de Acción */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <button 
               onClick={toggleLanguage}
               className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative group"
@@ -110,6 +137,18 @@ export default function Navbar() {
               <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                 {t("nav.contact")}
               </Link>
+
+              {/* BOTÓN CV (MOBILE) */}
+              <motion.a 
+                href="/cv.pdf" 
+                download="CV_Mauricio_Terrones.pdf"
+                animate={{ scale: [1, 1.02, 1] }} // Latido más suave en móvil
+                transition={{ duration: 2, repeat: Infinity }}
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-500/20 mx-auto w-full"
+              >
+                <Download size={18} />
+                {t("nav.cv")}
+              </motion.a>
               
               <div className="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-800">
                 <div className="flex gap-4">
