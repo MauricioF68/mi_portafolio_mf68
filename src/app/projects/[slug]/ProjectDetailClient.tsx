@@ -28,8 +28,7 @@ const content = {
     dataArch: "Arquitectura de Datos",
     dbEngine: "Motor de Base de Datos",
     structure: "Estructura",
-    tables: "Tablas Maestras",
-    normalization: "Normalización",
+    tables: "Tablas Maestras",    
     mer: "Diagrama Entidad-Relación (MER)",
     zoom: "Click para ampliar",
     backlog: "Gestión del Alcance (Backlog)",
@@ -57,7 +56,6 @@ const content = {
     dbEngine: "Database Engine",
     structure: "Structure",
     tables: "Master Tables",
-    normalization: "Normalization",
     mer: "Entity-Relationship Diagram (ERD)",
     zoom: "Click to zoom",
     backlog: "Scope Management (Backlog)",
@@ -227,10 +225,7 @@ export default function ProjectDetailClient({ project }: { project: Project }) {
                           <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-medium"><Table size={16} /> {project.caseStudy.database.tablesCount} {t.tables}</div>
                         </div>
                         <div className="w-full h-[1px] bg-slate-200 dark:bg-slate-700"></div>
-                        <div>
-                          <p className="text-xs text-slate-400 uppercase font-bold mb-1">{t.normalization}</p>
-                          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200 font-medium"><FileSpreadsheet size={16} /> {project.caseStudy.database.normalization}</div>
-                        </div>
+                        
                      </div>
                   </div>
                   <div className="lg:col-span-2">
