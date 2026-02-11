@@ -60,8 +60,8 @@ export default function Navbar() {
 
           {/* BOTÓN CV (DESKTOP) - COMPACTO Y CON LATIDO */}
           <motion.a 
-            href="/cv.pdf" 
-            download="CV_Mauricio_Terrones.pdf"
+            href="/docs/CV_Mauricio_Terrones_2026.pdf" 
+            download="CV_Mauricio_Terrones_2026.pdf"
             // Animación de latido infinito
             animate={{ 
               scale: [1, 1.05, 1], // Crece y se encoge
